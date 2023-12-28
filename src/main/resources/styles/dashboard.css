@@ -1,0 +1,190 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 4, 2023, 5:50:39 PM
+    Author     : maula
+*/
+
+
+.seacrhField {
+    -fx-font-size : 14px;
+    -fx-background-color : transparent;
+    -fx-border-radius : 7px;
+    -fx-border-color : linear-gradient(to bottom left, #24e80b , #1eae0b);
+    -fx-padding : 0px 0px 0px 28px;
+}
+
+.minimize {
+    -fx-background-color : transparent;
+    -fx-cursor : hand;
+}
+
+.table-view {
+    -fx-background-color : transparent;
+    -fx-border-color : linear-gradient(to bottom left, #24e80b , #1eae0b);
+    -fx-border-radius : 10px;
+    -fx-border-width : 2px;
+    -fx-padding : 0px;
+}
+
+.table-view .table-column {
+    -fx-alignment : CENTER;
+}
+
+.table-view .column-header-background {
+    -fx-background-color : linear-gradient(to bottom left, #24e80b , #1eae0b);
+    -fx-background-radius : 8px 8px 0px 0px;
+}
+
+.table-view .column-header {
+    -fx-background-color : transparent;
+    -fx-size : 50px;
+
+}
+
+.table-view .column-header .label {
+    -fx-text-fill : #fff;
+    -fx-font-family : Arial;
+
+}
+
+.minimize:hover {
+    -fx-background-color : #d0c8c4;
+}
+
+
+.close {
+    -fx-background-color : transparent;
+    -fx-cursor : hand;
+}
+
+.close:hover {
+    -fx-background-color : #d73232;
+}
+
+.close:hover .icon{
+    -fx-fill : #fff;
+}
+
+
+.dashboardMenu {
+    -fx-background-color : #d0c8c4;
+
+}
+
+.background {
+    -fx-background-color : #000 ;
+}
+
+.profile {
+    -fx-background-color : linear-gradient(to bottom left, #24e80b , #1eae0b);
+    -fx-background-radius : 7px;
+
+}
+
+.btn-Menu {
+    -fx-background-color : transparent;
+    -fx-background-radius : 5px;
+    -fx-text-fill : #fff;
+    -fx-cursor : hand;
+}
+
+.btn-Menu:hover{
+    -fx-background-color : linear-gradient(to bottom right, #196ec9, #0557ae);
+    -fx-effect : dropshadow(three-pass-box ,#1eae0b, 8,0,0,0);
+}
+
+
+.shadow {
+    -fx-effect : dropshadow(three-pass-box, rgba(0,0,0,.5), 8,0,0,0);
+}
+
+.main-Bg{
+    -fx-background-color : #fff;
+    -fx-background-radius : 7px;
+}
+
+.card {
+    -fx-background-color : linear-gradient(to bottom left, #24e80b , #1eae0b);
+    -fx-background-radius : 2px 2px 10px 10px;
+}
+
+.card-middle {
+    -fx-background-color : linear-gradient(to bottom left, #24e80b , #1eae0b);
+    -fx-background-radius : 10px;
+}
+
+.card-last {
+    -fx-background-color : linear-gradient(to bottom left, #24e80b , #1eae0b);
+    -fx-background-radius : 10px 10px 2px 2px;
+}
+
+
+.textField{
+    -fx-background-color : #eee;
+    -fx-font-family : Tahoma;
+    -fx-border-color : #25bebf;
+    -fx-border-width : .5px;
+}
+
+.textField:focused {
+    -fx-background-color : #f5f5f5;
+    -fx-border-width : 1.5px;
+}
+
+
+.addBtn {
+    -fx-background-color : linear-gradient(to bottom left, #24e80b , #1eae0b);
+    -fx-background-radius : 4px;
+    -fx-cursor:hand;
+    -fx-font-size : 15px;
+    -fx-font-family : Bookman Old Style;
+    -fx-text-fill : #fff;
+}
+
+.addBtn:hover {
+    -fx-background-color : linear-gradient(to bottom left,#1eae0b, #24e80b);
+}
+
+
+.deleteBtn {
+    -fx-background-color : linear-gradient(to bottom left, #f20c0c , #c90e0e);
+    -fx-background-radius : 4px;
+    -fx-cursor:hand;
+    -fx-font-size : 15px;
+    -fx-font-family : Bookman Old Style;
+    -fx-text-fill : #fff;
+}
+
+.deleteBtn:hover {
+    -fx-background-color : linear-gradient(to bottom left, #c90e0e,#f20c0c);
+}
+
+.updateBtn {
+    -fx-background-color : linear-gradient(to bottom left, #4629a4 , #26078d);
+    -fx-background-radius : 4px;
+    -fx-cursor:hand;
+    -fx-font-size : 15px;
+    -fx-font-family : Bookman Old Style;
+    -fx-text-fill : #fff;
+}
+
+.updateBtn:hover {
+    -fx-background-color : linear-gradient(to bottom left , #26078d, #4629a4);
+}
+
+
+.clearBtn {
+    -fx-background-color : linear-gradient(to bottom left, #05a8a8 , #019090);
+    -fx-background-radius : 4px;
+    -fx-cursor:hand;
+    -fx-font-size : 15px;
+    -fx-font-family : Bookman Old Style;
+    -fx-text-fill : #fff;
+}
+
+.clearBtn:hover {
+    -fx-background-color : linear-gradient(to bottom left , #019090, #05a8a8);
+}

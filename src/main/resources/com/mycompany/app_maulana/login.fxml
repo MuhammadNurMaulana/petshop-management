@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.app_maulana.loginController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0" styleClass="background" stylesheets="@../../../styles/login.css">
+         <children>
+            <Label layoutX="40.0" layoutY="231.0" text="Selamat Datang">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="171.0" layoutY="287.0" prefHeight="27.0" prefWidth="60.0" text="Login">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="333.0" text="Username">
+               <font>
+                  <Font name="Baskerville Old Face" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="78.0" layoutY="360.0" onAction="#adminLogin" onDragDetected="#adminLogin" prefHeight="34.0" prefWidth="245.0" promptText="Enter you username : Maulana123" styleClass="textField" stylesheets="@../../../styles/login.css" />
+            <Label layoutX="81.0" layoutY="403.0" text="Password">
+               <font>
+                  <Font name="Baskerville Old Face" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="login" layoutX="136.0" layoutY="494.0" mnemonicParsing="false" onAction="#adminLogin" prefHeight="34.0" prefWidth="128.0" styleClass="login" stylesheets="@../../../styles/login.css" text="Login">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="password" layoutX="78.0" layoutY="438.0" onAction="#adminLogin" onDragDetected="#adminLogin" prefHeight="34.0" prefWidth="245.0" promptText="Enter your password : ***" styleClass="textField" stylesheets="@../../../styles/login.css" />
+            <AnchorPane layoutY="-3.0" prefHeight="34.0" prefWidth="400.0" styleClass="top" stylesheets="@../../../styles/login.css">
+               <children>
+                  <Button fx:id="close" layoutX="340.0" layoutY="-1.0" mnemonicParsing="false" onAction="#close" prefHeight="34.0" prefWidth="60.0" styleClass="close" stylesheets="@../../../styles/login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fcfcfc" glyphName="CLOSE" size="17" styleClass="icon" />
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="19.0" fitWidth="32.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="54.0" layoutY="7.0" text="Petshop Management Aplication" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="136.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

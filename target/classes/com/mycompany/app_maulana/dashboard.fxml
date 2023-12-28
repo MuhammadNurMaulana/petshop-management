@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.app_maulana.dashboardController">
+   <children>
+      <AnchorPane fx:id="dashboard_main" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../styles/dashboard.css">
+         <children>
+            <BorderPane prefHeight="550.0" prefWidth="1200.0" styleClass="dashboardMenu" stylesheets="@../../../styles/dashboard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="29.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="6.0" prefHeight="28.0" prefWidth="1200.0" styleClass="background" stylesheets="@../../../styles/dashboard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="-1.0">
+                                 <image>
+                                    <Image url="@../../../images/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="43.0" layoutY="5.0" text="PetShop Application " textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="close" layoutX="1224.0" layoutY="8.0" mnemonicParsing="false" onAction="#close" prefHeight="29.0" prefWidth="76.0" styleClass="close" stylesheets="@../../../styles/dashboard.css" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1224.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="16" styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="minimize" layoutX="1136.0" mnemonicParsing="false" onAction="#minimize" prefHeight="29.0" prefWidth="82.0" styleClass="minimize" stylesheets="@../../../styles/dashboard.css" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1136.0" AnchorPane.rightAnchor="82.0" AnchorPane.topAnchor="0.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="16" styleClass="icons" text="" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="521.0" prefWidth="191.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="6.0" layoutY="6.0" prefHeight="193.0" prefWidth="190.0" stylesheets="@../../../styles/dashboard.css" AnchorPane.bottomAnchor="334.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="6.0">
+                           <children>
+                              <Label layoutX="63.0" layoutY="110.0" text="ADMIN" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="username" alignment="CENTER" layoutX="20.0" layoutY="122.0" prefWidth="150.0" text="Maulana" textFill="WHITE">
+                                 <font>
+                                    <Font name="Blackadder ITC" size="36.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="62.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="profile" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </AnchorPane>
+                        <AnchorPane fx:id="custMenu" layoutX="5.0" layoutY="208.0" prefHeight="250.0" prefWidth="192.0" stylesheets="@../../../styles/dashboard.css">
+                           <children>
+                              <Button fx:id="foodBtn" layoutX="5.0" layoutY="65.0" mnemonicParsing="false" onAction="#switchMenu" prefHeight="35.0" prefWidth="183.0" styleClass="btn-Menu" stylesheets="@../../../styles/dashboard.css" text="DATA BARANG TERSEDIA">
+                                 <font>
+                                    <Font name="Bookman Old Style Bold" size="12.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Button>
+                              <Button fx:id="orderBtn" layoutX="24.0" layoutY="108.0" mnemonicParsing="false" onAction="#switchMenu" prefHeight="35.0" prefWidth="150.0" styleClass="btn-Menu" stylesheets="@../../../styles/dashboard.css" text="ORDER PEMBELIAN">
+                                 <font>
+                                    <Font name="Bookman Old Style Bold" size="12.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Button>
+                              <Button fx:id="homeBtn" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchMenu" prefHeight="35.0" prefWidth="165.0" styleClass="btn-Menu" stylesheets="@../../../styles/dashboard.css" text="HOME DASHBOARD">
+                                 <font>
+                                    <Font name="Bookman Old Style Bold" size="12.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Button>
+                              <Button fx:id="custBtn" layoutX="14.0" layoutY="151.0" mnemonicParsing="false" onAction="#switchMenu" prefHeight="35.0" prefWidth="165.0" styleClass="btn-Menu" stylesheets="@../../../styles/dashboard.css" text="LIST CUSTOMER">
+                                 <font>
+                                    <Font name="Bookman Old Style Bold" size="12.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Button>
+                              <Button fx:id="staticBtn" layoutX="7.0" layoutY="194.0" mnemonicParsing="false" onAction="#switchMenu" prefHeight="35.0" prefWidth="183.0" styleClass="btn-Menu" stylesheets="@../../../styles/dashboard.css" text="DASHBOARD STATISTICS">
+                                 <font>
+                                    <Font name="Bookman Old Style Bold" size="12.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Button>
+                           </children>
+                           <styleClass>
+                              <String fx:value="profile" />
+                              <String fx:value="shadow" />
+                           </styleClass></AnchorPane>
+                        <AnchorPane layoutX="5.0" layoutY="464.0" prefHeight="53.0" prefWidth="193.0" stylesheets="@../../../styles/dashboard.css">
+                           <children>
+                              <Button fx:id="signout" layoutX="5.0" layoutY="6.0" mnemonicParsing="false" onAction="#signOut" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/signout.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label layoutX="51.0" layoutY="5.0" prefHeight="36.0" prefWidth="82.0" text="Sign Out" textFill="WHITE">
+                                 <font>
+                                    <Font name="Blackadder ITC" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="profile" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Separator layoutX="11.0" orientation="VERTICAL" prefHeight="526.0" prefWidth="6.0" />
+                        <AnchorPane fx:id="food_menu" layoutX="44.0" layoutY="74.0" prefHeight="533.0" prefWidth="1102.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="13.0" layoutY="7.0" prefHeight="134.0" prefWidth="1076.0" stylesheets="@../../../styles/dashboard.css">
+                                 <styleClass>
+                                    <String fx:value="main-Bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="21.0" layoutY="14.0" text="ID Produk :" />
+                                    <TextField fx:id="food_productID" layoutX="89.0" layoutY="10.0" styleClass="textField" stylesheets="@../../../styles/dashboard.css" />
+                                    <Label layoutX="256.0" layoutY="14.0" text="Nama Produk :" textFill="#26078d" />
+                                    <TextField fx:id="food_productName" layoutX="346.0" layoutY="10.0" styleClass="textField" stylesheets="@../../../styles/dashboard.css" />
+                                    <Label layoutX="526.0" layoutY="14.0" text="Tipe Barang :" />
+                                    <ComboBox fx:id="food_type" layoutX="608.0" layoutY="10.0" prefWidth="150.0" promptText="Pilihan" styleClass="textField" stylesheets="@../../../styles/dashboard.css" />
+                                    <Label layoutX="296.0" layoutY="59.0" text="Harga :" />
+                                    <TextField fx:id="food_price" layoutX="347.0" layoutY="55.0" styleClass="textField" stylesheets="@../../../styles/dashboard.css" />
+                                    <Label layoutX="519.0" layoutY="59.0" text="Status barang :" />
+                                    <ComboBox fx:id="food_status" layoutX="608.0" layoutY="55.0" prefWidth="150.0" promptText="Pilihan" styleClass="textField" stylesheets="@../../../styles/dashboard.css" />
+                                    <Button fx:id="food_add" layoutX="805.0" layoutY="19.0" mnemonicParsing="false" onAction="#foodAdd" prefHeight="35.0" prefWidth="84.0" styleClass="addBtn" stylesheets="@../../../styles/dashboard.css" text="ADD">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="food_delete" layoutX="917.0" layoutY="19.0" mnemonicParsing="false" onAction="#foodDelete" prefHeight="35.0" prefWidth="84.0" styleClass="deleteBtn" stylesheets="@../../../styles/dashboard.css" text="DELETE" />
+                                    <Button fx:id="food_clear" layoutX="805.0" layoutY="76.0" mnemonicParsing="false" onAction="#foodClear" prefHeight="35.0" prefWidth="84.0" styleClass="clearBtn" stylesheets="@../../../styles/dashboard.css" text="CLEAR" />
+                                    <Button fx:id="food_update" layoutX="917.0" layoutY="76.0" mnemonicParsing="false" onAction="#foodUpdate" prefHeight="35.0" prefWidth="84.0" styleClass="updateBtn" stylesheets="@../../../styles/dashboard.css" text="UPDATE" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="13.0" layoutY="158.0" prefHeight="363.0" prefWidth="1076.0" stylesheets="@../../../styles/dashboard.css">
+                                 <styleClass>
+                                    <String fx:value="main-Bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TextField fx:id="food_search" layoutX="14.0" layoutY="14.0" onAction="#foodSearch" prefHeight="33.0" prefWidth="234.0" promptText="Search" styleClass="seacrhField" stylesheets="@../../../styles/dashboard.css" />
+                                    <FontAwesomeIconView glyphName="SEARCH" layoutX="24.0" layoutY="34.0" />
+                                    <TableView fx:id="food_tableView" editable="true" layoutX="14.0" layoutY="59.0" onKeyTyped="#foodSearch" onMouseClicked="#foodSelect" prefHeight="291.0" prefWidth="1053.0">
+                                      <columns>
+                                        <TableColumn id=".tableColumn" fx:id="food_col_productID" prefWidth="234.0" text="ID Produk" />
+                                        <TableColumn fx:id="food_col_productName" prefWidth="257.0" text="Nama Produk" />
+                                          <TableColumn fx:id="food_col_type" prefWidth="169.0" text="Tipe Barang" />
+                                          <TableColumn fx:id="food_col_price" prefWidth="208.0" text="Harga" />
+                                          <TableColumn fx:id="food_col_status" prefWidth="184.0" text="Status Ketersediaan" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="order_menu" layoutX="149.0" layoutY="76.0" prefHeight="533.0" prefWidth="1102.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="22.0" layoutY="7.0" prefHeight="359.0" prefWidth="1075.0" stylesheets="@../../../styles/dashboard.css">
+                                 <styleClass>
+                                    <String fx:value="main-Bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="order_tableView" layoutX="14.0" layoutY="14.0" prefHeight="335.0" prefWidth="1050.0">
+                                      <columns>
+                                        <TableColumn fx:id="order_col_productId" prefWidth="131.0" text="ID Produk" />
+                                        <TableColumn fx:id="order_col_productName" prefWidth="407.0" text="Nama Produk" />
+                                          <TableColumn fx:id="order_col_type" prefWidth="199.0" text="Tipe Barang" />
+                                          <TableColumn fx:id="order_col_price" prefWidth="152.0" text="Harga" />
+                                          <TableColumn fx:id="order_col_quantity" prefWidth="159.0" text="Jumlah" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="22.0" layoutY="374.0" prefHeight="145.0" prefWidth="1075.0" stylesheets="@../../../styles/dashboard.css">
+                                 <styleClass>
+                                    <String fx:value="main-Bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="26.0" text="ID Produk :">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="order_productID" layoutX="131.0" layoutY="22.0" onMouseClicked="#orderProductId" prefWidth="150.0" promptText="Pilihan" styleClass="textField" stylesheets="@../../../styles/dashboard.css" />
+                                    <Label layoutX="93.0" layoutY="65.0" text="Nama Produk :">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="order_productName" layoutX="217.0" layoutY="60.0" onMouseClicked="#orderProductName" prefWidth="150.0" promptText="Pilihan" styleClass="textField" stylesheets="@../../../styles/dashboard.css" />
+                                    <Spinner fx:id="order_quantity" layoutX="218.0" layoutY="97.0" onMouseClicked="#orderQuantity" prefHeight="25.0" prefWidth="92.0" styleClass="textField" stylesheets="@../../../styles/dashboard.css" />
+                                    <Label layoutX="135.0" layoutY="102.0" text="Jumlah :">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="555.0" layoutY="27.0" text="Total :">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="order_total" layoutX="620.0" layoutY="21.0" prefHeight="28.0" prefWidth="119.0" stylesheets="@../../../styles/dashboard.css" text="Rp  0.0">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="795.0" layoutY="27.0" text="Bayar :">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="order_amount" layoutX="875.0" layoutY="23.0" onAction="#orderAmount" promptText="Rp 0.0" styleClass="textField" stylesheets="@../../../styles/dashboard.css" />
+                                    <Button fx:id="order_pay" layoutX="667.0" layoutY="95.0" mnemonicParsing="false" onAction="#orderPay" prefHeight="38.0" prefWidth="94.0" styleClass="addBtn" stylesheets="@../../../styles/dashboard.css" text="PAY" />
+                                    <Button fx:id="order_add" layoutX="390.0" layoutY="54.0" mnemonicParsing="false" onAction="#orderAdd" prefHeight="38.0" prefWidth="94.0" styleClass="clearBtn" stylesheets="@../../../styles/dashboard.css" text="ADD" />
+                                    <Label layoutX="593.0" layoutY="65.0" text="Kembalian :">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="order_balance" layoutX="702.0" layoutY="59.0" prefHeight="28.0" prefWidth="119.0" stylesheets="@../../../styles/dashboard.css" text="Rp 0.0">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="cust_menu" layoutX="26.0" layoutY="7.0" prefHeight="512.0" prefWidth="1068.0" stylesheets="@../../../styles/dashboard.css" visible="false" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="7.0">
+                           <styleClass>
+                              <String fx:value="dashboardMenu" />
+                              <String fx:value="main-Bg" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="cust_tableView" layoutX="14.0" layoutY="14.0" prefHeight="492.0" prefWidth="1046.0">
+                                <columns>
+                                  <TableColumn fx:id="cust_custId" prefWidth="199.0" text="CUSTOMER ID" />
+                                  <TableColumn fx:id="cust_custTotal" prefWidth="474.0" text="Total Belanja" />
+                                    <TableColumn fx:id="cust_custDate" prefWidth="371.0" text="HARI / TANGGAL CUSTOMER" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="home_menu" layoutX="136.0" layoutY="77.0" prefHeight="526.0" prefWidth="1102.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="24.0" layoutY="9.0" prefHeight="509.0" prefWidth="1068.0" stylesheets="@../../../styles/dashboard.css">
+                                 <styleClass>
+                                    <String fx:value="main-Bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="207.0" layoutY="22.0" text="SELAMAT DATANG DI APLIKASI PETSHOP">
+                                       <font>
+                                          <Font name="Tahoma Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="32.0" layoutY="79.0" text="Tutorial singkat cara penggunaan Petshop Aplikasi">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="54.0" layoutY="136.0" text="- Silahkan masuk ke dashboard Data Barang tersedia untuk">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="82.0" layoutY="156.0" text="~ Menambahkan Data Barang yang ingin di tambah">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="82.0" layoutY="173.0" text="~ Meghapus data sebuah barang">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="82.0" layoutY="190.0" text="~ Mengupdate data sebuah barang">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="82.0" layoutY="207.0">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="207.0" layoutY="235.0" text="- Silahkan masuk ke dashboard Order Pembelian untuk melakukan pembelian yang akan dibeli oleh customer">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="145.0" layoutY="269.0" text="- Silahkan masuk ke dashboard List Customer untuk melihat list customer harian anda">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="static_menu" layoutX="144.0" layoutY="77.0" prefHeight="526.0" prefWidth="1102.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="21.0" layoutY="8.0" prefHeight="510.0" prefWidth="1073.0" stylesheets="@../../../styles/dashboard.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                 <styleClass>
+                                    <String fx:value="main-Bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="67.0" layoutY="41.0" prefHeight="200.0" prefWidth="939.0" styleClass="card" stylesheets="@../../../styles/dashboard.css">
+                                       <children>
+                                          <Label layoutX="432.0" layoutY="42.0" text="Total Keuangan" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="static_total" layoutX="464.0" layoutY="137.0" prefHeight="23.0" prefWidth="212.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="432.0" layoutY="137.0" text="Rp" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="478.0" layoutY="85.0" text="Petshop" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="153.0" fitWidth="158.0" layoutX="263.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/9964394.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="63.0" layoutY="274.0" prefHeight="200.0" prefWidth="440.0" styleClass="card" stylesheets="@../../../styles/dashboard.css">
+                                       <children>
+                                          <Label layoutX="191.0" layoutY="42.0" text="Total Customer" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="static_totalCust" alignment="CENTER" layoutX="181.0" layoutY="120.0" prefHeight="23.0" prefWidth="206.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="235.0" layoutY="79.0" text="Petshop" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="60.0" layoutY="122.0" size="80" wrappingWidth="87.8571424484253" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="567.0" layoutY="274.0" prefHeight="200.0" prefWidth="440.0" styleClass="card" stylesheets="@../../../styles/dashboard.css">
+                                       <children>
+                                          <Label layoutX="194.0" layoutY="46.0" text="Total Customer" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="static_custHarian" alignment="CENTER" layoutX="190.0" layoutY="119.0" prefHeight="23.0" prefWidth="190.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="194.0" layoutY="76.0" text="Harian Petshop" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="76.0" layoutY="128.0" size="80" wrappingWidth="58.85714244842529" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
